@@ -1,0 +1,37 @@
+.card-container {
+  width: 300px;
+  height: 420px;
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  margin: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 1px 5px 10px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+  margin-left: 420px;
+  position: relative;
+  z-index: 2;
+}
+.circle-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  text-align: center;
+  margin: 0 auto;
+}
+.card-container h3 {
+  margin-top: 30px;
+  color: hsl(241, 100%, 89%);
+}
+.card-container p {
+  margin-top: 0px;
+  color: hsl(241, 100%, 89%);
+}
