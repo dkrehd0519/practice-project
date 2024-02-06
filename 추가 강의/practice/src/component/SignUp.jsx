@@ -4,8 +4,8 @@ import axios from "axios";
 const SignUp = () => {
   const navigate = useNavigate();
 
-  const [userName, setUserName] = useState("");
-  const [passWord, setPassword] = useState("");
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -23,8 +23,8 @@ const SignUp = () => {
   };
   const handleSubmit = async (e) => {
     const formData = new FormData();
-    formData.append("userName", userName);
-    formData.append("passWord", passWord);
+    formData.append("userName", username);
+    formData.append("passWord", password);
     formData.append("name", name);
     formData.append("email", email);
 
@@ -32,8 +32,8 @@ const SignUp = () => {
     try {
       const response = await axios.post(
         "https://ll-api.jungsub.com/ptrack/user/signup",
-        userName,
-        passWord,
+        username,
+        password,
         name,
         email
       );
@@ -53,14 +53,14 @@ const SignUp = () => {
         <label>ID</label>
         <input
           type="text"
-          value={userName}
+          value={username}
           placeholder="user name"
           onChange={handleUserNameChange}
         ></input>
         <label>Password</label>
         <input
           type="password"
-          value={passWord}
+          value={password}
           placeholder="password"
           onChange={handlePassWordChange}
         ></input>
